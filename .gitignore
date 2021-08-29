@@ -4,6 +4,7 @@
 pranyafront-app/node_modules
 pranyafront-app/yarn.lock
 pranyafront-app/package-lock.json
+pranyafront-app/src/fireAuth/cred.js
 # ./pranyafront-app/.pnp
 # .pnp.js
 
