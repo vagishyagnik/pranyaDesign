@@ -1,8 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-./pranyafront-app/node_modules
-./pranyafront-app/yarn.lock
+pranyafront-app/node_modules
+pranyafront-app/yarn.lock
+pranyafront-app/package-lock.json
 # ./pranyafront-app/.pnp
 # .pnp.js
 
