@@ -55,9 +55,24 @@ function App() {
         setFile(event.target.files[0]);
     }
 
-    const onSubmit = (formData) => {
-        console.log(url);
+    const onSubmit = async (formData) => {
         console.log(formData);
+        const response = await fetch("http://localhost:6979/publish",{
+            method : 'POST',
+            mode : 'cors',
+            headers : {'Content-Type' : 'application/json'},
+            body : JSON.stringify(formData)
+        })
+        console.log("Server response = " + response);
+    }
+
+    const checkAPI = async () => {
+        const response = await fetch("http://localhost:6979/",{
+            method : 'GET',
+            mode : 'cors',
+            headers : {'Content-Type' : 'application/json'},
+        })
+        console.log("Server response = " + response);
     }
 
     function handleUpload(){
@@ -78,6 +93,7 @@ function App() {
             <button onClick={()=> login(facebookProvider)}>Login with Facebook</button>
             <button onClick={()=> fetchUserDetails()}>FetchDetails</button>
             <br/><br/>
+            <button onClick={checkAPI}>Check Connection</button>
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 {formContent.inputs.map((input, key)=>{

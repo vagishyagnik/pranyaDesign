@@ -88,7 +88,7 @@ const formContent = {
             label:"Select Dimension Units",
             name:"units",
             type:"select",
-            options:["cm", "inches"]
+            options:["centimeter", "centimeter"]
         },
         {
             label:"Color",
